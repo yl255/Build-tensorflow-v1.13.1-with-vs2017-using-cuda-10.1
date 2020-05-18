@@ -1,0 +1,1211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{37A7F923-E7B6-39B9-B21F-47010B17E4B7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>tf_core_kernels</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tf_core_kernels.dir\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tf_core_kernels.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tf_core_kernels</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tf_core_kernels.dir\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tf_core_kernels.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tf_core_kernels</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tf_core_kernels.dir\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tf_core_kernels.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">tf_core_kernels</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tf_core_kernels.dir\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tf_core_kernels.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">tf_core_kernels</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /EHs-c- /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4267;4244;4800;4503;4554;4996;4348;4018;4099;4146;4305;4307;4715;4722;4723;4838;4309;4334;4003;4506;4577</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;SQLITE_OMIT_LOAD_EXTENSION;EIGEN_AVOID_STL_ARRAY;WIN64;NOMINMAX;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;NOGDI;PLATFORM_WINDOWS;TENSORFLOW_USE_EIGEN_THREADPOOL;EIGEN_HAS_C99_MATH;TF_COMPILE_LIBRARY;_HAS_EXCEPTIONS=0;GRPC_ARES=0;TF_USE_SNAPPY;GOOGLE_CUDA=1;TF_EXTRA_CUDA_CAPABILITIES=3.7,5.2,6.0,6.1,7.0;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;SQLITE_OMIT_LOAD_EXTENSION;EIGEN_AVOID_STL_ARRAY;WIN64;NOMINMAX;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;NOGDI;PLATFORM_WINDOWS;TENSORFLOW_USE_EIGEN_THREADPOOL;EIGEN_HAS_C99_MATH;TF_COMPILE_LIBRARY;_HAS_EXCEPTIONS=0;GRPC_ARES=0;TF_USE_SNAPPY;GOOGLE_CUDA=1;TF_EXTRA_CUDA_CAPABILITIES=3.7,5.2,6.0,6.1,7.0;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /EHs-c- /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4267;4244;4800;4503;4554;4996;4348;4018;4099;4146;4305;4307;4715;4722;4723;4838;4309;4334;4003;4506;4577</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_ITERATOR_DEBUG_LEVEL=0;SQLITE_OMIT_LOAD_EXTENSION;EIGEN_AVOID_STL_ARRAY;WIN64;NOMINMAX;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;NOGDI;PLATFORM_WINDOWS;TENSORFLOW_USE_EIGEN_THREADPOOL;EIGEN_HAS_C99_MATH;TF_COMPILE_LIBRARY;_HAS_EXCEPTIONS=0;GRPC_ARES=0;TF_USE_SNAPPY;GOOGLE_CUDA=1;TF_EXTRA_CUDA_CAPABILITIES=3.7,5.2,6.0,6.1,7.0;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_ITERATOR_DEBUG_LEVEL=0;SQLITE_OMIT_LOAD_EXTENSION;EIGEN_AVOID_STL_ARRAY;WIN64;NOMINMAX;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;NOGDI;PLATFORM_WINDOWS;TENSORFLOW_USE_EIGEN_THREADPOOL;EIGEN_HAS_C99_MATH;TF_COMPILE_LIBRARY;_HAS_EXCEPTIONS=0;GRPC_ARES=0;TF_USE_SNAPPY;GOOGLE_CUDA=1;TF_EXTRA_CUDA_CAPABILITIES=3.7,5.2,6.0,6.1,7.0;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /EHs-c- /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4267;4244;4800;4503;4554;4996;4348;4018;4099;4146;4305;4307;4715;4722;4723;4838;4309;4334;4003;4506;4577</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_ITERATOR_DEBUG_LEVEL=0;SQLITE_OMIT_LOAD_EXTENSION;EIGEN_AVOID_STL_ARRAY;WIN64;NOMINMAX;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;NOGDI;PLATFORM_WINDOWS;TENSORFLOW_USE_EIGEN_THREADPOOL;EIGEN_HAS_C99_MATH;TF_COMPILE_LIBRARY;_HAS_EXCEPTIONS=0;GRPC_ARES=0;TF_USE_SNAPPY;GOOGLE_CUDA=1;TF_EXTRA_CUDA_CAPABILITIES=3.7,5.2,6.0,6.1,7.0;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_ITERATOR_DEBUG_LEVEL=0;SQLITE_OMIT_LOAD_EXTENSION;EIGEN_AVOID_STL_ARRAY;WIN64;NOMINMAX;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;NOGDI;PLATFORM_WINDOWS;TENSORFLOW_USE_EIGEN_THREADPOOL;EIGEN_HAS_C99_MATH;TF_COMPILE_LIBRARY;_HAS_EXCEPTIONS=0;GRPC_ARES=0;TF_USE_SNAPPY;GOOGLE_CUDA=1;TF_EXTRA_CUDA_CAPABILITIES=3.7,5.2,6.0,6.1,7.0;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /EHs-c- /bigobj</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4267;4244;4800;4503;4554;4996;4348;4018;4099;4146;4305;4307;4715;4722;4723;4838;4309;4334;4003;4506;4577</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_ITERATOR_DEBUG_LEVEL=0;SQLITE_OMIT_LOAD_EXTENSION;EIGEN_AVOID_STL_ARRAY;WIN64;NOMINMAX;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;NOGDI;PLATFORM_WINDOWS;TENSORFLOW_USE_EIGEN_THREADPOOL;EIGEN_HAS_C99_MATH;TF_COMPILE_LIBRARY;_HAS_EXCEPTIONS=0;GRPC_ARES=0;TF_USE_SNAPPY;GOOGLE_CUDA=1;TF_EXTRA_CUDA_CAPABILITIES=3.7,5.2,6.0,6.1,7.0;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_ITERATOR_DEBUG_LEVEL=0;SQLITE_OMIT_LOAD_EXTENSION;EIGEN_AVOID_STL_ARRAY;WIN64;NOMINMAX;_WIN32_WINNT=0x0A00;WIN32_LEAN_AND_MEAN;NOGDI;PLATFORM_WINDOWS;TENSORFLOW_USE_EIGEN_THREADPOOL;EIGEN_HAS_C99_MATH;TF_COMPILE_LIBRARY;_HAS_EXCEPTIONS=0;GRPC_ARES=0;TF_USE_SNAPPY;GOOGLE_CUDA=1;TF_EXTRA_CUDA_CAPABILITIES=3.7,5.2,6.0,6.1,7.0;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\SELF\tensorflow-1.13.1\build2017\abseil_cpp\src\abseil_cpp;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1;F:\SELF\tensorflow-1.13.1\build2017;F:\SELF\tensorflow-1.13.1\build2017\external\zlib_archive;F:\SELF\tensorflow-1.13.1\build2017\external\gif_archive\giflib-5.1.4;F:\SELF\tensorflow-1.13.1\build2017\external\png_archive;F:\SELF\tensorflow-1.13.1\build2017\external\jpeg_archive;F:\SELF\tensorflow-1.13.1\build2017\external\lmdb;F:\SELF\tensorflow-1.13.1\build2017\external\eigen_archive;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\eigen3;F:\SELF\tensorflow-1.13.1\build2017\gemmlowp\src\gemmlowp;F:\SELF\tensorflow-1.13.1\build2017\jsoncpp\src\jsoncpp;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive;F:\SELF\tensorflow-1.13.1\build2017\external\farmhash_archive\util;F:\SELF\tensorflow-1.13.1\build2017\external\highwayhash;F:\SELF\tensorflow-1.13.1\build2017\cub\src\cub;F:\SELF\tensorflow-1.13.1\build2017\external\nsync\public;F:\SELF\tensorflow-1.13.1\build2017\protobuf\src\protobuf\src;F:\SELF\tensorflow-1.13.1\build2017\re2\install\include;F:\SELF\tensorflow-1.13.1\build2017\external\sqlite;F:\SELF\tensorflow-1.13.1\build2017\double_conversion\src\double_conversion;F:\SELF\tensorflow-1.13.1\build2017\grpc\src\grpc\include;F:\SELF\tensorflow-1.13.1\build2017\snappy\src\snappy;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\CUPTI\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\third_party\gpus;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\adjust_contrast_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\adjust_contrast_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\adjust_hsv_gpu.cu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\adjust_hue_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\adjust_hue_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\adjust_saturation_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\adjust_saturation_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\aggregate_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\aggregate_ops.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\aggregate_ops_cpu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\argmax_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\argmax_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\as_string_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\assign_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\attention_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\avgpooling_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\avgpooling_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\barrier_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\base64_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batch_kernels.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batch_matmul_op_complex.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batch_matmul_op_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batch_matmul_op_real.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batch_norm_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batch_norm_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batch_util.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batching_util\adaptive_shared_batch_scheduler.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batching_util\basic_batch_scheduler.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batching_util\batch_scheduler.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batching_util\fake_clock_env.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batching_util\fake_clock_env.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batching_util\periodic_function.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batching_util\periodic_function.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batching_util\serial_device_batch_scheduler.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batching_util\shared_batch_scheduler.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\batchtospace_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bcast_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\betainc_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\betainc_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bias_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bias_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bias_op_gpu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bincount_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bincount_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bitcast_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bitcast_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\prediction_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/boosted_trees/prediction_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\quantile_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/boosted_trees/quantile_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\quantiles\quantile_stream_resource.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\quantiles\weighted_quantiles_buffer.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\quantiles\weighted_quantiles_stream.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\quantiles\weighted_quantiles_summary.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\resource_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/boosted_trees/resource_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\resources.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/boosted_trees/resources.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\resources.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\stats_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\training_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/boosted_trees/training_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\boosted_trees\tree_helper.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bounds_check.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\broadcast_to_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\broadcast_to_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bucketize_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\bucketize_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\candidate_sampler_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_bfloat.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_bool.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_complex128.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_complex64.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_double.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_float.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_half.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_int16.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_int32.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_int64.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_int8.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_uint16.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_uint32.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_uint64.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cast_op_impl_uint8.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\check_numerics_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cholesky_grad.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cholesky_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\collective_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\colorspace_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\colorspace_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\compare_and_bitpack_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\compare_and_bitpack_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\concat_lib.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\concat_lib_cpu.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\concat_lib_cpu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\concat_lib_gpu.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\concat_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conditional_accumulator.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conditional_accumulator_base.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conditional_accumulator_base.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conditional_accumulator_base_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conditional_accumulator_base_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conditional_accumulator_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\constant_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\constant_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\control_flow_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\control_flow_ops.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_2d.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_2d_gpu.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_3d.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_grad_filter_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_grad_input_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_grad_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_grad_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_grad_ops_3d.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_ops_3d.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_ops_fused.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_ops_fused_image_transform.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_ops_gpu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\conv_ops_using_gemm.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\count_up_to_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\crop_and_resize_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\crop_and_resize_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cross_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cross_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\ctc_decoder_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\ctc_loss_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cuda_device_array.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cuda_device_array_gpu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cuda_solvers.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cuda_solvers.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cudnn_pooling_gpu.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cudnn_pooling_gpu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cudnn_rnn_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_abs.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_acos.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_acosh.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_add_1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_add_2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_arg.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_asin.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_asinh.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_atan.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_atan2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_atanh.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_bessel.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_bitwise_and.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_bitwise_or.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_bitwise_xor.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_ceil.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_clip.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_clip.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_complex.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_conj.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_cos.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_cosh.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_digamma.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_div.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_equal_to_1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_equal_to_2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_erf.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_erfc.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_exp.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_expm1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_floor.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_floor_div.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_floor_mod.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_greater.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_greater_equal.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_igammas.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_imag.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_invert.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_isfinite.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_isinf.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_isnan.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_left_shift.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_less.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_less_equal.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_lgamma.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_log.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_log1p.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_logical_and.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_logical_not.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_logical_or.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_maximum.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_minimum.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_mod.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_mul_1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_mul_2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_neg.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_not_equal_to_1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_not_equal_to_2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_pow.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_random_grad.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_real.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_reciprocal.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_right_shift.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_rint.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_round.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_rsqrt.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_select.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_sigmoid.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_sign.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_sin.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_sinh.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_sqrt.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_square.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_squared_difference.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_sub.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_tan.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_tanh.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_xdivy.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_xlogy.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_op_zeta.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_ops_common.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_ops_common.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_ops_gpu_common.cu.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_ops_gpu_gradients.cu.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_ops_gradients.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\cwise_ops_sycl_common.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\batch_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\cache_dataset_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\captured_function.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\captured_function.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\concatenate_dataset_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\dataset.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\dataset_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\dataset_utils.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\dataset_utils.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\assert_next_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\csv_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\dense_to_sparse_batch_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\directed_interleave_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\group_by_reducer_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\group_by_window_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\ignore_errors_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\indexed_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\lmdb_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\map_and_batch_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\matching_files_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\non_serializable_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\numa_map_and_batch_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\parallel_interleave_dataset_op.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/data/experimental/parallel_interleave_dataset_op.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\parse_example_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\prefetching_kernels.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\random_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\scan_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\set_stats_aggregator_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\sleep_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\sliding_window_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\sql\driver_manager.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\sql\driver_manager.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\sql\query_connection.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\sql\sqlite_query_connection.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\sql\sqlite_query_connection.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\sql_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\stats_aggregator_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\stats_dataset_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\threadpool_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\to_tf_record_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\unbatch_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\experimental\unique_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\filter_by_component_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\filter_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\flat_map_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\generator_dataset_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\generator_dataset_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\interleave_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\iterator_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\iterator_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\map_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\map_defun_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\model_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\multi_device_iterator_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\optimize_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\optional_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\optional_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\padded_batch_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\parallel_interleave_dataset_op.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/data/parallel_interleave_dataset_op.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\parallel_map_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\parallel_map_iterator.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\parallel_map_iterator.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\prefetch_autotuner.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\prefetch_autotuner.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\prefetch_dataset_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\prefetch_dataset_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\range_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\reader_dataset_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\repeat_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\shuffle_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\single_threaded_executor.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\single_threaded_executor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\skip_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\sparse_tensor_slice_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\take_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\tensor_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\tensor_slice_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\window_dataset.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\window_dataset.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\window_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data\zip_dataset_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data_format_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\data_format_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\debug_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\debug_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\decode_bmp_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\decode_compressed_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\decode_csv_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\decode_image_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\decode_proto_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\decode_raw_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\decode_wav_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\deep_conv2d.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\deep_conv2d.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\dense_update_functor.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\dense_update_functor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\dense_update_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\depthtospace_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\depthtospace_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\depthwise_conv_grad_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\depthwise_conv_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\depthwise_conv_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\dequantize_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\deserialize_sparse_string_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\deserialize_sparse_variant_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\determinant_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\determinant_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\diag_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\diag_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\dilation_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\dilation_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\draw_bounding_box_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\dynamic_partition_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\dynamic_stitch_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\edit_distance_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_activations.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_attention.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_backward_cuboid_convolutions.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_backward_spatial_convolutions.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_benchmark.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_contraction_kernel.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_contraction_kernel.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_cuboid_convolution.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_pooling.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_softmax.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_spatial_convolutions.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eigen_volume_patch.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\encode_jpeg_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\encode_png_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\encode_proto_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\encode_wav_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\example_parsing_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\extract_image_patches_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\extract_image_patches_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\extract_jpeg_shape_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\extract_volume_patches_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\extract_volume_patches_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\eye_functor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fact_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fake_quant_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fake_quant_ops_functor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fft_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fifo_queue.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fifo_queue.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fifo_queue_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fill_functor.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fill_functor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fixed_length_record_reader_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fractional_avg_pool_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fractional_max_pool_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fractional_pool_common.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fractional_pool_common.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\function_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\function_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\functional_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fused_batch_norm_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\fused_batch_norm_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_functor.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_functor.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_functor_gpu.cu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op_cpu_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op_cpu_impl_0.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op_cpu_impl_1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op_cpu_impl_2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op_cpu_impl_3.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op_cpu_impl_4.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op_cpu_impl_5.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op_cpu_impl_6.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_nd_op_cpu_impl_7.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gather_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gemm_functors.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\generate_vocab_remapping_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\gpu_utils.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\guarantee_const_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\hinge-loss.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\histogram_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\histogram_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\host_constant_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\host_constant_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\i_remote_fused_graph_executor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\i_remote_fused_graph_ops_definitions.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\i_remote_fused_graph_ops_definitions.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\identity_n_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\identity_n_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\identity_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\identity_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\identity_reader_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\image_resizer_state.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\immutable_constant_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\immutable_constant_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\in_topk_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\initializable_lookup_table.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\initializable_lookup_table.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\inplace_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\inplace_ops_functor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\l2loss_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\l2loss_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\linalg_ops_common.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\linalg_ops_common.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\list_kernels.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\list_kernels.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\listdiff_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\lmdb_reader_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\load_and_remap_matrix_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\logging_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\logistic-loss.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\lookup_table_init_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\lookup_table_init_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\lookup_table_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\lookup_table_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\lookup_util.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\lookup_util.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\loss.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\lrn_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\lu_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\map_stage_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matching_files_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matmul_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matmul_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_band_part_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_band_part_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_diag_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_exponential_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_inverse_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_logarithm_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_set_diag_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_set_diag_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_solve_ls_op_complex128.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_solve_ls_op_complex64.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_solve_ls_op_double.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_solve_ls_op_float.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_solve_ls_op_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_solve_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_square_root_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\matrix_triangular_solve_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\maxpooling_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\maxpooling_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\maxpooling_op_gpu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\meta_support.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\meta_support.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mfcc.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mfcc.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mfcc_dct.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mfcc_dct.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mfcc_mel_filterbank.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mfcc_mel_filterbank.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mfcc_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mirror_pad_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mirror_pad_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mirror_pad_op_cpu_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mirror_pad_op_cpu_impl_1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mirror_pad_op_cpu_impl_2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mirror_pad_op_cpu_impl_3.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mirror_pad_op_cpu_impl_4.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mirror_pad_op_cpu_impl_5.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_aggregate_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_avgpooling_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_batch_matmul_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_concat_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_conv_grad_bias_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_conv_grad_filter_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_conv_grad_input_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_conv_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_conv_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_cwise_ops_common.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_fused_batch_norm_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_identity_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_input_conversion_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_lrn_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_matmul_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_maxpooling_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_pooling_ops_common.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_pooling_ops_common.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_quantized_conv_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_relu_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_reshape_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_slice_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_softmax_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_tfconv_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mkl_transpose_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\multinomial_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\multinomial_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\mutex_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\nccl_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\no_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\no_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\non_max_suppression_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\non_max_suppression_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\nth_element_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\nth_element_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\one_hot_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\ops_util.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\pack_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\pad_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\pad_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\padding_fifo_queue.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\padding_fifo_queue.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\padding_fifo_queue_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\parameterized_truncated_normal_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\parameterized_truncated_normal_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\parse_tensor_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\partitioned_function_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\poisson-loss.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\pooling_ops_3d.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\pooling_ops_3d.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\pooling_ops_3d_gpu.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\pooling_ops_3d_sycl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\pooling_ops_common.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\pooling_ops_common.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\pooling_ops_common_gpu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\population_count_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\population_count_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\priority_queue.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\priority_queue.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\priority_queue_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\qr_op_complex128.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\qr_op_complex64.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\qr_op_double.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\qr_op_float.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\qr_op_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantization_utils.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantization_utils.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantize_and_dequantize_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantize_and_dequantize_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantize_down_and_shrink_range.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantize_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_activation_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_add_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_batch_norm_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_bias_add_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_concat_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_conv_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_instance_norm.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_matmul_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_mul_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_pooling_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_reshape_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\quantized_resize_bilinear_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\queue_base.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\queue_base.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\queue_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\queue_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\queue_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\ragged_gather_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\ragged_range_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\ragged_tensor_to_sparse_kernel.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\random_crop_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\random_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\random_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\random_poisson_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\random_poisson_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\random_shuffle_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\random_shuffle_queue_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\range_sampler.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\range_sampler.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reader_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\record_input_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\record_yielder.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\record_yielder.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduce_join_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_gpu_kernels.cu.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_ops_all.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_ops_any.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_ops_common.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_ops_common.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_ops_max.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_ops_mean.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_ops_min.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_ops_prod.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reduction_ops_sum.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reference_gemm.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\regex_full_match_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\regex_replace_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\relu_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\relu_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\relu_op_functor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\remote_fused_graph_execute_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\remote_fused_graph_execute_utils.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\remote_fused_graph_execute_utils.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\requantization_range_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\requantize.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reshape_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reshape_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reshape_util.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reshape_util.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\resize_area_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\resize_bicubic_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\resize_bilinear_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\resize_bilinear_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\resize_nearest_neighbor_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\resize_nearest_neighbor_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\resource_variable_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\resource_variable_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\restore_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reverse_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reverse_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reverse_sequence_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\reverse_sequence_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\roll_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\rpc_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sample_distorted_bounding_box_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\save_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\save_restore_tensor.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\save_restore_tensor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\save_restore_v2_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scan_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scan_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_functor.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_functor.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_functor_gpu.cu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op_cpu_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op_cpu_impl_0.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op_cpu_impl_1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op_cpu_impl_2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op_cpu_impl_3.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op_cpu_impl_4.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op_cpu_impl_5.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op_cpu_impl_6.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_nd_op_cpu_impl_7.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scatter_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\scoped_allocator_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sdca_internal.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sdca_internal.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sdca_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\searchsorted_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\searchsorted_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\segment_reduction_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\segment_reduction_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\self_adjoint_eig_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\self_adjoint_eig_v2_op_complex128.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\self_adjoint_eig_v2_op_complex64.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\self_adjoint_eig_v2_op_double.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\self_adjoint_eig_v2_op_float.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\self_adjoint_eig_v2_op_gpu.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\self_adjoint_eig_v2_op_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sendrecv_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sendrecv_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sequence_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\serialize_sparse_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\session_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\set_kernels.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\shape_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\shape_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\slice_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\slice_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\slice_op_cpu_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\slice_op_cpu_impl_1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\slice_op_cpu_impl_2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\slice_op_cpu_impl_3.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\slice_op_cpu_impl_4.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\slice_op_cpu_impl_5.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\slice_op_cpu_impl_6.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\slice_op_cpu_impl_7.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\smooth-hinge-loss.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\snapshot_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\snapshot_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\softmax_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\softmax_op_functor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\softplus_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\softplus_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\softsign_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\softsign_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\spacetobatch_functor.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\spacetobatch_functor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\spacetobatch_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\spacetodepth_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\spacetodepth_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_add_grad_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_add_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_concat_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_conditional_accumulator.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_conditional_accumulator_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_cross_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_dense_binary_op_shared.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_fill_empty_rows_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_matmul_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_matmul_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_reduce_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_reorder_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_reshape_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_slice_grad_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_slice_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_softmax_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_sparse_binary_op_shared.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_split_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_tensor_dense_add_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_tensor_dense_add_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_tensor_dense_matmul_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_tensor_dense_matmul_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_tensors_map_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_to_dense_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_xent_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\sparse_xent_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\spectrogram.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\spectrogram.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\spectrogram_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\split_lib.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\split_lib_cpu.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\split_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\split_v_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\squared-loss.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\stack.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\stack.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\stack_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\stage_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\stateless_random_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\stateless_random_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op_define_grad.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op_inst_0.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op_inst_1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op_inst_2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op_inst_3.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op_inst_4.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op_inst_5.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op_inst_6.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\strided_slice_op_inst_7.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\string_format_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\string_join_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\string_length_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\string_split_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\string_strip_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\string_to_hash_bucket_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\string_to_hash_bucket_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\string_to_number_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\string_util.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\string_util.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\substr_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\summary_audio_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\summary_image_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\summary_interface.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\summary_kernels.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\summary_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\summary_tensor_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\svd_op_complex128.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\svd_op_complex64.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\svd_op_double.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\svd_op_float.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\svd_op_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tensor_array.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tensor_array.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tensor_array_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tensor_forest\prediction_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/tensor_forest/prediction_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tensor_forest\resource_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/tensor_forest/resource_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tensor_forest\resources.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/tensor_forest/resources.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tensor_forest\resources.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\text_line_reader_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tf_record_reader_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_functor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_functor_cpu.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops_cpu_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops_cpu_impl_1.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops_cpu_impl_2.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops_cpu_impl_3.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops_cpu_impl_4.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops_cpu_impl_5.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops_cpu_impl_6.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops_cpu_impl_7.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops_gpu_impl.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\tile_ops_impl.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\topk_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\topk_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\training_op_helpers.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\training_op_helpers.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\training_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/training_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\training_ops.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\transpose_functor.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\transpose_functor_cpu.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\transpose_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\transpose_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\typed_conditional_accumulator_base.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\typed_queue.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\unary_ops_composition.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\unicode_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\unicode_script_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\unique_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\unpack_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\unravel_index_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\variable_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/core/kernels/variable_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\variable_ops.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\where_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\where_op.h" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\where_op_gpu.cu.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\whole_file_read_ops.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\winograd_transform.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\word2vec_kernels.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\xent_op.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\xent_op.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\xsmm_conv2d.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\kernels\xsmm_conv2d.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\nccl\nccl_manager.cc" />
+    <ClInclude Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\nccl\nccl_manager.h" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\core\nccl\nccl_rewrite.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\kernels\model_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/kernels/model_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\kernels\prediction_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/kernels/prediction_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\kernels\quantile_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/kernels/quantile_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\kernels\split_handler_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/kernels/split_handler_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\kernels\stats_accumulator_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/kernels/stats_accumulator_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\kernels\training_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/kernels/training_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\lib\utils\batch_features.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\lib\utils\dropout_utils.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\lib\utils\examples_iterable.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\lib\utils\parallel_for.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\lib\utils\sparse_column_iterable.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\lib\utils\tensor_utils.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\lib\learner\common\partitioners\example_partitioner.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\lib\models\multiple_additive_trees.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\lib\trees\decision_tree.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\ops\model_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/ops/model_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\ops\prediction_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/ops/prediction_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\ops\quantile_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/ops/quantile_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\ops\split_handler_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/ops/split_handler_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\ops\stats_accumulator_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/ops/stats_accumulator_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\boosted_trees\ops\training_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/boosted_trees/ops/training_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\coder\kernels\pmf_to_cdf_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\coder\kernels\range_coder.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\coder\kernels\range_coder_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\coder\kernels\range_coder_ops_util.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\coder\ops\coder_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\factorization\kernels\clustering_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/factorization/kernels/clustering_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\factorization\kernels\masked_matmul_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\factorization\kernels\wals_solver_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\factorization\ops\clustering_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/factorization/ops/clustering_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\factorization\ops\factorization_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\framework\kernels\zero_initializer_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\framework\ops\variable_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/framework/ops/variable_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\image\kernels\adjust_hsv_in_yiq_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\image\kernels\bipartite_match_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\image\kernels\image_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/image/kernels/image_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\image\kernels\segmentation_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\image\kernels\single_image_random_dot_stereograms_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/image/kernels/single_image_random_dot_stereograms_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\image\ops\distort_image_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\image\ops\image_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/image/ops/image_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\image\ops\single_image_random_dot_stereograms_ops.cc">
+      <ObjectFileName>$(IntDir)/F_/SELF/tensorflow-1.13.1/tensorflow-1.13.1/tensorflow/contrib/image/ops/single_image_random_dot_stereograms_ops.cc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\layers\kernels\sparse_feature_cross_kernel.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\layers\ops\sparse_feature_cross_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\libsvm\kernels\decode_libsvm_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\libsvm\ops\libsvm_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\resampler\ops\resampler_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\ops\tensor_forest_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\kernels\reinterpret_string_to_float_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\kernels\scatter_add_ndim_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\kernels\tree_utils.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\hybrid\core\ops\hard_routing_function_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\hybrid\core\ops\k_feature_gradient_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\hybrid\core\ops\k_feature_routing_function_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\hybrid\core\ops\routing_function_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\hybrid\core\ops\routing_gradient_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\hybrid\core\ops\stochastic_hard_routing_function_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\hybrid\core\ops\stochastic_hard_routing_gradient_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\hybrid\core\ops\unpack_path_op.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tensor_forest\hybrid\core\ops\utils.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\text\kernels\skip_gram_kernels.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\text\ops\skip_gram_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tpu\ops\cross_replica_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tpu\ops\infeed_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tpu\ops\outfeed_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tpu\ops\replication_ops.cc" />
+    <ClCompile Include="F:\SELF\tensorflow-1.13.1\tensorflow-1.13.1\tensorflow\contrib\tpu\ops\tpu_configuration_ops.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="F:\SELF\tensorflow-1.13.1\build2017\tf_core_cpu.vcxproj">
+      <Project>{949B083C-652F-3FEE-8993-0BB97867DC13}</Project>
+      <Name>tf_core_cpu</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
