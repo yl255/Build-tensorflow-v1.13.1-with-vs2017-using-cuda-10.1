@@ -2,6 +2,7 @@ tensorflow-v1.31.1-build-with-vs2017-cuda10.1
 
 system info: cuda 10.1, vs2017 Community, cmake 3.16.0
 I just build the C/C++ api, not using Python.
+
 1 prepare for building:
 1.1 tensorflow-v1.31.1(short as 'tf') source code (please download from github)
     1) unzip the code to ./tensorflow-1.13.1
