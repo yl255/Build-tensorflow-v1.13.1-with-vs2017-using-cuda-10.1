@@ -84,17 +84,18 @@ The build directory is : ./build2017
 `CUDA_TOOLKIT_ROOT_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.1`
 `tensorflow_BUILD_SHARED_LIB=ON` (for build the tensorflow.dll)
  The SWIG is not need to set when tensorflow_BUILD_PYTHON_BINDINGS=OFF.
-####  2.4 when generated done, open the project (I got 196 sub projects).
-####  2.5 manually editing the project.
+####2.4 when generated done, open the project (I got 196 sub projects).
+####2.5 manually editing the project.
 + 1) copy add dnn.pb.h and dnn.pb.cc (see 1.1.9) to the directory ./build2017/tensorflow/stream_executor. And add them to tf_stream_executor project for building.
 + 2) copy the icu to the project dirtory ./build2017. you need to build it(see 1.4)
 + 3) copy the grpc(version 1.24.3) source code to the folder ./build2017/grpc/src/grpc.
 + 4) copy the nccl code to the ./build2017/nccl folder. you need to build it(see 1.3)
-Some file include nccl.h, need to edit.
-The files: tensorflow/core/kernels/nccl_ops.cc, tensorflow/core/nccl/nccl_manager.h
-change #include "third_party/nccl/nccl.h" to #include "nccl/nccl.h" .
+     + Some file include **nccl.h**, need to reedit.
+     + The files: tensorflow/core/kernels/nccl_ops.cc, tensorflow/core/nccl/nccl_manager.h 
+	 change '```#include "third_party/nccl/nccl.h"``` to ```#include "nccl/nccl.h" ```.
 **make sure the right folder of the nccl.h**
-####  2.6 add the icu/lib64/icuuc.lib to the tf_core_kernels project.
+
+####2.6 add the icu/lib64/icuuc.lib to the tf_core_kernels project.
  How to do:
 Right click tf_core_kernels project, chose Configuration Properties->Link->Input->Additional Dependencies.
 The icu include folder is also needed to add to the project. .\build2017-s\icu\include
@@ -104,7 +105,7 @@ Right click tf_core_kernels project, chose Configuration Properties->C/C++->Gene
 ####  2.8 When building, it maybe get an Error C1060: compiler is out of heap space
 see:[error c1060](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-errors-1/fatal-error-c1060?view=vs-2019 "error c1060")
  What I do:
- Reedit the tf_core_kernels.vcxproj file, find the text: 
+ Reedit the *tf_core_kernels.vcxproj* file, find the text: 
  ```
  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
  ```
@@ -124,7 +125,7 @@ see:[error c1060](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-e
 + icuuc.lib (in icu\lib64, see 1.4)
 ####3.1 grpc_tensorflow_server:
 + add dnn.pb.h.obj to the project's **[Object Libraries]**.
-**  !!!Expand the project in the solution view, the 'Object Libraries' option will be seen. ** 
+**  !!!Expand the project in the solution view, the 'Object Libraries' option will be seen. **
 + add tf_core_eager_runtime.dir\Release\tf_core_eager_runtime.lib to the project.
 + add cares.lib(in the folder ./build2017/grpc/src/grpc/third_party/cares/cares/lib/Release) to the project.
 + add nccl64_134.10.1.lib to the project
@@ -151,7 +152,7 @@ see:[error c1060](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-e
 + add nccl64_134.10.1.lib to the project.
 ####3.5 summarize_graph
 + add icuuc.lib to the project.
-+ tf_stream_executor.dir\Release\tf_stream_executor.lib, tf_cc_ops.dir\Release\tf_cc_ops.lib, + + tf_cc_framework.dir\Release\tf_cc_framework.lib to the project.
++ tf_stream_executor.dir\Release\tf_stream_executor.lib, tf_cc_ops.dir\Release\tf_cc_ops.lib,  tf_cc_framework.dir\Release\tf_cc_framework.lib to the project.
 + add nccl64_134.10.1.lib to the project.
 + add core.cu.obj, all_reduce.cu.obj, broadcast.cu.obj, reduce.cu.obj to the project's [Object Libraries].
 ####3.6 about the tensorflow.dll
@@ -160,8 +161,8 @@ see:[error c1060](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-e
 + add dnn.pb.h.obj to the project
 + add nccl64_134.10.1.lib to the project
 + add core.cu.obj, all_reduce.cu.obj, broadcast.cu.obj, reduce.cu.obj to the project
-+ **!!!** delete one of the 'c_api.cc.obj' files in the project's [Object Libraries].
-+ **!!!** delete one of the 'c_api_debug.obj' files in the project's [Object Libraries].
++ **delete** one of the *c_api.cc.obj* files in the project's [Object Libraries].
++ **delete** one of the *c_api_debug.obj* files in the project's [Object Libraries].
 ####3.7 Then rebuild the project.
 ###4 Install the project.
   build the INSTALL project to get the header files and libs.
