@@ -38,6 +38,7 @@ It need to edit the file grpc.cmake(in tensorflow/contrib/cmake/external) , but 
 So I just copy the code of grpc-v1.24.3 to the folder.
 when building, there are some forward declaration errors about the 'grpc':
 some header files with the forward declaration like:
+```
 		namespace grpc {
 			class CompletionQueue;
 			class Channel;
@@ -45,7 +46,8 @@ some header files with the forward declaration like:
 			class ServerCompletionQueue;
 			class ServerContext;
 		}  // namespace grpc'
-I just comment out the redefined class such as "class CompletionQueue", and add the header file #include "grpcpp/completion_queue.h".
+```
+I just comment out the redefined class such as "class CompletionQueue", and add the header file ```#include "grpcpp/completion_queue.h"```.
 **!!!It is very strange :(**
 The files as follows(maybe more):
 tensorflow/core/distributed_runtime/rpc/eager/grpc_eager_service.h
