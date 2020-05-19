@@ -23,11 +23,13 @@ The files such as:
 `tensorflow/core/kernels/topk_op_gpu.cu.cc`
 `tensorflow/core/kernels/where_op_gpu.cu.h`
 `tensorflow/core/kernels/bincount_op_gpu.cu.cc'
-+ 7) !!!open the file 'tensorflow/core/framework/op_kernel.h',
+
++ 7) open the file 'tensorflow/core/framework/op_kernel.h',
 change
 
 ```reference operator*() { return (*list_)[i_]; }```  to
 ```reference operator*() const { return (*list_)[i_]; }```
+
 see:[25943](https://github.com/tensorflow/tensorflow/pull/25943 "25943")
 + 8)about 'grpc'.
 The CMakeList.txt has the item 'tensorflow_ENABLE_GRPC_SUPPORT', but it seemed can not build succesed with 'tensorflow_ENABLE_GRPC_SUPPORT=OFF'.So I build the project with 'tensorflow_ENABLE_GRPC_SUPPORT=ON'.
@@ -86,8 +88,8 @@ The build directory is : ./build2017
 `CUDA_TOOLKIT_ROOT_DIR=C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.1`
 `tensorflow_BUILD_SHARED_LIB=ON` (for build the tensorflow.dll)
  The SWIG is not need to set when tensorflow_BUILD_PYTHON_BINDINGS=OFF.
-####2.4 when generated done, open the project (I got 196 sub projects).
-####2.5 manually editing the project.
+#### 2.4 when generated done, open the project (I got 196 sub projects).
+#### 2.5 manually editing the project.
 + 1) copy add dnn.pb.h and dnn.pb.cc (see 1.1.9) to the directory ./build2017/tensorflow/stream_executor. And add them to tf_stream_executor project for building.
 + 2) copy the icu to the project dirtory ./build2017. you need to build it(see 1.4)
 + 3) copy the grpc(version 1.24.3) source code to the folder ./build2017/grpc/src/grpc.
@@ -97,14 +99,14 @@ The build directory is : ./build2017
 	 change '```#include "third_party/nccl/nccl.h"``` to ```#include "nccl/nccl.h" ```.
 **make sure the right folder of the nccl.h**
 
-####2.6 add the icu/lib64/icuuc.lib to the tf_core_kernels project.
+#### 2.6 add the icu/lib64/icuuc.lib to the tf_core_kernels project.
  How to do:
 Right click tf_core_kernels project, chose Configuration Properties->Link->Input->Additional Dependencies.
 The icu include folder is also needed to add to the project. .\build2017-s\icu\include
 Right click tf_core_kernels project, chose Configuration Properties->C/C++->General->Additional Include Directories
 
-####  2.7 build the program with 'Release X64' model.
-####  2.8 When building, it maybe get an Error C1060: compiler is out of heap space
+#### 2.7 build the program with 'Release X64' model.
+#### 2.8 When building, it maybe get an Error C1060: compiler is out of heap space
 see:[error c1060](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-errors-1/fatal-error-c1060?view=vs-2019 "error c1060")
  What I do:
  Reedit the *tf_core_kernels.vcxproj* file, find the text: 
@@ -117,47 +119,47 @@ see:[error c1060](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-e
 <PreferredToolArchitecture>x64</PreferredToolArchitecture>
 </PropertyGroup>
 ```
-####2.9 Reload the project, and build it again.
-###3 After first building, some tool projects will be failed, and the tensorflow.dll will be failed.
+#### 2.9 Reload the project, and build it again.
+### 3 After first building, some tool projects will be failed, and the tensorflow.dll will be failed.
   such as **grpc_tensorflow_server**, **benchmark_model**, **transform_graph**, **compare_graphs**, **summarize_graph**
   There are some *.obj and *.lib files:
 + dnn.pb.h.obj (in ./build2017/tf_stream_executor.dir/Release)
 + core.cu.obj, all_reduce.cu.obj, broadcast.cu.obj, reduce.cu.obj (in nccl/windows/x64/Release/obj.10.1, see 1.3)
 + nccl64_134.10.1.lib (in nccl/windows/x64/Release)
 + icuuc.lib (in icu\lib64, see 1.4)
-####3.1 grpc_tensorflow_server:
+#### 3.1 grpc_tensorflow_server:
 + add dnn.pb.h.obj to the project's **[Object Libraries]**.
 **  !!!Expand the project in the solution view, the 'Object Libraries' option will be seen. **
 + add tf_core_eager_runtime.dir\Release\tf_core_eager_runtime.lib to the project.
 + add cares.lib(in the folder ./build2017/grpc/src/grpc/third_party/cares/cares/lib/Release) to the project.
 + add nccl64_134.10.1.lib to the project
 + grpc\src\grpc\$(Configuration)\address_sorting.lib to the project
-####3.2 benchmark_model
+#### 3.2 benchmark_model
 + add tf_cc_ops.dir\Release\tf_cc_ops.lib to the project.
 + add icuuc.lib to the project.
 + add core.cu.obj, all_reduce.cu.obj, broadcast.cu.obj, reduce.cu.obj to the project's [Object Libraries].
 + tf_cc_framework.dir\Release ops.obj scope.obj to the project's [Object Libraries].
 + add nccl64_134.10.1.lib(see 1.3) to the project.
-####3.3 transform_graph
+#### 3.3 transform_graph
 + add dnn.pb.h.obj to the project's [Object Libraries].
 + add icuuc.lib to the project.
 + tf_cc_framework.dir\Release\tf_cc_framework.lib to the project.
 + tf_cc_ops.dir\Release\tf_cc_ops.lib to the project.
 + add core.cu.obj, all_reduce.cu.obj, broadcast.cu.obj, reduce.cu.obj to the project's [Object Libraries].
 + add nccl64_134.10.1.lib(see 1.3) to the project.
-####3.4 compare_graphs
+#### 3.4 compare_graphs
 + add icuuc.lib to the project.
 + add tf_stream_executor.dir\Release\tf_stream_executor.lib to the project.
 + add tf_cc_framework.dir\Release\tf_cc_framework.lib to the project.
 + add tf_cc_ops.dir\Release\tf_cc_ops.lib to the project.
 + add core.cu.obj, all_reduce.cu.obj, broadcast.cu.obj, reduce.cu.obj to the project's [Object Libraries].
 + add nccl64_134.10.1.lib to the project.
-####3.5 summarize_graph
+#### 3.5 summarize_graph
 + add icuuc.lib to the project.
 + tf_stream_executor.dir\Release\tf_stream_executor.lib, tf_cc_ops.dir\Release\tf_cc_ops.lib,  tf_cc_framework.dir\Release\tf_cc_framework.lib to the project.
 + add nccl64_134.10.1.lib to the project.
 + add core.cu.obj, all_reduce.cu.obj, broadcast.cu.obj, reduce.cu.obj to the project's [Object Libraries].
-####3.6 about the tensorflow.dll
+#### 3.6 about the tensorflow.dll
 + add grpc\src\grpc\$(Configuration)\address_sorting.lib to the project
 + add icuuc.lib to the project
 + add dnn.pb.h.obj to the project
@@ -165,8 +167,10 @@ see:[error c1060](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-e
 + add core.cu.obj, all_reduce.cu.obj, broadcast.cu.obj, reduce.cu.obj to the project
 + **delete** one of the *c_api.cc.obj* files in the project's [Object Libraries].
 + **delete** one of the *c_api_debug.obj* files in the project's [Object Libraries].
-####3.7 Then rebuild the project.
-###4 Install the project.
+#### 3.7 Then rebuild the project.
+
+### 4 Install the project.
   + build the INSTALL project to get the header files and libs.
-###5 to do list
+  
+### 5 to do list
   + some steps should be done in cmake file.
