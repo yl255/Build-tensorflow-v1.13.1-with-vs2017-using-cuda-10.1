@@ -1,9 +1,9 @@
-# tensorflow-v1.31.1-build-with-vs2017-cuda10.1
+# tensorflow-v1.13.1-build-with-vs2017-cuda10.1
 
 system info: cuda 10.1, vs2017 Community, cmake 3.16.0
 I just build the C/C++ api, not using Python.
 ### prepare for building:
-#### 1.1 tensorflow-v1.31.1 source code (please download from github)
+#### 1.1 tensorflow-v1.13.1 source code (please download from github)
 + 1) unzip the code to ./tensorflow-1.13.1
 + 2) the project need a new version of abseil_cpp. Update the abseil_cpp.cmake (in the ./tensorflow/contrib/cmake/external) to  the my version.
 + 3) copy the "version_info.cc" file to the ./tensorflow/core/util/version_info.cc.(Auto generate?)
